@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-
+// https://docs.flutter.dev/development/ui/widgets/animation
 class MyAnimatedBuilder extends StatefulWidget {
   const MyAnimatedBuilder({Key? key}) : super(key: key);
 
@@ -18,11 +18,15 @@ class _MyAnimatedBuilderState extends State<MyAnimatedBuilder>
     duration: const Duration(seconds: 10),
     vsync: this,
   )..repeat();
+  late final Animation<double> _animation = CurvedAnimation(
+    parent: _controller,
+    curve: Curves.fastOutSlowIn,
+  );
 
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-        animation: _controller,
+        animation: _animation,
         child: Center(
           child: Image.asset(
             'assets/images/flat_logo.png',
