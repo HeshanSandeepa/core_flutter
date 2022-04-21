@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_core/widget_of_the_week/animated_builder.dart';
-import 'package:flutter_core/widget_of_the_week/custom_paint.dart';
+
+import 'widget_of_the_week/dismissable.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyPainter(),
+      home: DismissibleApp(),
     );
   }
 }
