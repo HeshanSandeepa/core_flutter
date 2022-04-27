@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'widget_of_the_week/dismissable.dart';
+import 'package:flutter_core/widget_of_the_week/animated_list.dart';
+import 'package:flutter_core/widget_of_the_week/draggable.dart';
+import 'package:flutter_core/widget_of_the_week/flexible.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: DismissibleApp(),
+      home: const FlexibleApp(),
     );
   }
 }
