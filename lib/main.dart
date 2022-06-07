@@ -8,6 +8,7 @@ import 'package:flutter_core/widget_of_the_week/flexible.dart';
 import 'package:flutter_core/widget_of_the_week/media_query.dart';
 import 'package:flutter_core/widget_of_the_week/spacer.dart';
 
+import 'async_coding/future_async_await.dart';
 import 'async_coding/isolate.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AspectRatioApp(),
+      home: FutureApp(),
     );
   }
 }
