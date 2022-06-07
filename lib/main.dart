@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_core/state_management/inherited_widget.dart';
+import 'package:flutter_core/widget_of_the_week/animated_icon.dart';
 import 'package:flutter_core/widget_of_the_week/animated_list.dart';
+import 'package:flutter_core/widget_of_the_week/aspect_ratio.dart';
 import 'package:flutter_core/widget_of_the_week/draggable.dart';
 import 'package:flutter_core/widget_of_the_week/flexible.dart';
 import 'package:flutter_core/widget_of_the_week/media_query.dart';
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: IsolateApp(),
+      home: AspectRatioApp(),
     );
   }
 }
