@@ -33,22 +33,55 @@ class _FutureAppState extends State<FutureApp> {
         () => throw Exception('Logout failed: user ID is invalid'));
   }
 
-  void createOrderMessage() {
-    // var order = fetchUserOrder();
-    // print('Your order is: $order');
+  // 04. Future, Async & Await
+  Future<String> fetchUserOrder4() {
+    // Imagine that this function is more complex and slow.
+    return Future.delayed(const Duration(seconds: 4), () => 'Large Latte');
+  }
+
+  // 05. Handling Errors
+  Future<void> printOrderMessage2() async {
 
     try {
-      fetchUserOrder3();
-    } on Exception catch (e){
-      print(e);
-    } catch (error) {
-      print(error);
+      print('Awaiting user order...');
+      await fetchUserOrder3();
+    } catch (err) {
+      print('Caught error: $err');
     }
   }
 
+
+  Future<void> fetchUserOrders() async {
+    // Imagine that this function is more complex.
+    Future.delayed(
+        const Duration(seconds: 4),
+            () => throw 'Cannot locate user order');
+
+  }
+
+  // void createOrderMessage() {
+  //   // var order = fetchUserOrder();
+  //   // print('Your order is: $order');
+  //
+  //   try {
+  //     fetchUserOrder4();
+  //   } on Exception catch (e){
+  //     print(e);
+  //   } catch (error) {
+  //     print(error);
+  //   }
+  // }
+
+  Future<void> printOrderMessage() async {
+    print('Awaiting user order...');
+    var order = await fetchUserOrder4();
+    print('Your order is: $order');
+  }
+
+
   @override
-  void initState() {
-    createOrderMessage();
+  void initState()  {
+    printOrderMessage2();
     super.initState();
   }
 
