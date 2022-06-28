@@ -16,6 +16,7 @@ import 'package:flutter_core/widget_of_the_week/spacer.dart';
 
 import 'async_coding/future_async_await.dart';
 import 'async_coding/isolate.dart';
+import 'flutter_in_focus/generators.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AnimatedSwitcherApp(),
+      home: GeneratorApp(),
     );
   }
 }
