@@ -3,8 +3,12 @@ import 'package:flutter_core/async_coding/streams.dart';
 import 'package:flutter_core/state_management/inherited_widget.dart';
 import 'package:flutter_core/widget_of_the_week/animated_icon.dart';
 import 'package:flutter_core/widget_of_the_week/animated_list.dart';
+import 'package:flutter_core/widget_of_the_week/animated_opacity.dart';
+import 'package:flutter_core/widget_of_the_week/animated_padding.dart';
+import 'package:flutter_core/widget_of_the_week/animated_positioned.dart';
 import 'package:flutter_core/widget_of_the_week/animated_switcher.dart';
 import 'package:flutter_core/widget_of_the_week/aspect_ratio.dart';
+import 'package:flutter_core/widget_of_the_week/constraint_box.dart';
 import 'package:flutter_core/widget_of_the_week/draggable.dart';
 import 'package:flutter_core/widget_of_the_week/flexible.dart';
 import 'package:flutter_core/widget_of_the_week/limited_box.dart';
@@ -13,6 +17,8 @@ import 'package:flutter_core/widget_of_the_week/place_holder.dart';
 import 'package:flutter_core/widget_of_the_week/reorderable_list_view.dart';
 import 'package:flutter_core/widget_of_the_week/rich_text.dart';
 import 'package:flutter_core/widget_of_the_week/spacer.dart';
+import 'package:flutter_core/widget_of_the_week/stack.dart';
+import 'package:flutter_core/widget_of_the_week/stacked_index.dart';
 
 import 'async_coding/future_async_await.dart';
 import 'async_coding/isolate.dart';
@@ -33,7 +39,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: GeneratorApp(),
+      home: AnimatedOpacityApp(),
     );
   }
 }
