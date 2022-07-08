@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_core/async_coding/streams.dart';
 import 'package:flutter_core/state_management/inherited_widget.dart';
+import 'package:flutter_core/widget_of_the_week/alerts.dart';
+import 'package:flutter_core/widget_of_the_week/animated_cross_fade.dart';
 import 'package:flutter_core/widget_of_the_week/animated_icon.dart';
 import 'package:flutter_core/widget_of_the_week/animated_list.dart';
 import 'package:flutter_core/widget_of_the_week/animated_opacity.dart';
@@ -46,7 +48,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SliderApp(),
+      home: AnimatedCrossFadeApp(),
     );
   }
 }
