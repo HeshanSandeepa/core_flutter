@@ -13,6 +13,19 @@ class _AnimatedCrossFadeAppState extends State<AnimatedCrossFadeApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        fixedColor: Colors.transparent,
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Colors.green),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'Search',
+              backgroundColor: Colors.yellow),
+        ],
+      ),
       appBar: AppBar(
         title: const Text('Flutter Selectable Text App'),
       ),
