@@ -9,21 +9,43 @@ class AnimatedCrossFadeApp extends StatefulWidget {
 
 class _AnimatedCrossFadeAppState extends State<AnimatedCrossFadeApp> {
   bool _showFirst = true;
+  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        fixedColor: Colors.transparent,
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-              backgroundColor: Colors.green),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: 'Search',
-              backgroundColor: Colors.yellow),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _selectedIndex,
+        onDestinationSelected: (index) => setState(() {
+          _selectedIndex = index;
+        }),
+        backgroundColor: Colors.transparent,
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+        destinations: [
+          NavigationDestination(
+            icon: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    color: _selectedIndex == 0 ? Colors.blue.shade100 : Colors.transparent,
+                    shape: BoxShape.rectangle),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text('Your subscriptions'),
+                )),
+            label: 'Your subscriptions',
+          ),
+          NavigationDestination(
+            icon: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    color: _selectedIndex == 1 ? Colors.blue.shade100 : Colors.transparent,
+                    shape: BoxShape.rectangle),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text('Up-coming bills'),
+                )),
+            label: 'Your subscriptions',
+          ),
         ],
       ),
       appBar: AppBar(
