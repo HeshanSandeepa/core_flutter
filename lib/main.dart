@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_core/async_coding/streams.dart';
 import 'package:flutter_core/state_management/inherited_widget.dart';
 import 'package:flutter_core/widget_of_the_week/alerts.dart';
+import 'package:flutter_core/widget_of_the_week/animated_container.dart';
 import 'package:flutter_core/widget_of_the_week/animated_cross_fade.dart';
 import 'package:flutter_core/widget_of_the_week/animated_icon.dart';
 import 'package:flutter_core/widget_of_the_week/animated_list.dart';
@@ -14,6 +15,7 @@ import 'package:flutter_core/widget_of_the_week/constraint_box.dart';
 import 'package:flutter_core/widget_of_the_week/container.dart';
 import 'package:flutter_core/widget_of_the_week/data_table.dart';
 import 'package:flutter_core/widget_of_the_week/draggable.dart';
+import 'package:flutter_core/widget_of_the_week/draggable_scrollable_sheet.dart';
 import 'package:flutter_core/widget_of_the_week/flexible.dart';
 import 'package:flutter_core/widget_of_the_week/fractional_sized_box.dart';
 import 'package:flutter_core/widget_of_the_week/limited_box.dart';
@@ -46,9 +48,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Core',
       theme: ThemeData(
+        navigationBarTheme: NavigationBarThemeData(
+            height: 80,
+            iconTheme: MaterialStateProperty.all(IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: AnimatedCrossFadeApp(),
+      home: AnimatedContainerApp(),
     );
   }
 }
