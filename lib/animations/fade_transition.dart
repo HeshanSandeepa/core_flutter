@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class SizeTransitionApp extends StatefulWidget {
-  const SizeTransitionApp({Key? key}) : super(key: key);
+class FadeTransitionApp extends StatefulWidget {
+  const FadeTransitionApp({Key? key}) : super(key: key);
 
   @override
-  State<SizeTransitionApp> createState() => _SizeTransitionAppState();
+  State<FadeTransitionApp> createState() => _FadeTransitionAppState();
 }
 
-class _SizeTransitionAppState extends State<SizeTransitionApp>
+class _FadeTransitionAppState extends State<FadeTransitionApp>
     with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 3),
     vsync: this,
-  )..repeat();
+  )..repeat(reverse: true);
   late final Animation<double> _animation = CurvedAnimation(
     parent: _controller,
-    curve: Curves.fastOutSlowIn,
+    curve: Curves.easeIn,
   );
 
   @override
@@ -29,16 +29,13 @@ class _SizeTransitionAppState extends State<SizeTransitionApp>
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Spacer'),
+        title: const Text('Flutter Size Transition'),
       ),
       body: Center(
-        child: SizeTransition(
-          sizeFactor: _animation,
-          axis: Axis.vertical,
-          axisAlignment: -1,
-          child: const Center(
-            child: FlutterLogo(size: 200.0),
-          ),
+        child: FadeTransition(
+          opacity: _animation,
+          child:
+              const Padding(padding: EdgeInsets.all(8), child: SizedBox(height: 300, width: 300, child: FlutterLogo())),
         ),
       ),
     );

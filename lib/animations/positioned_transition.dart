@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 
-class SizeTransitionApp extends StatefulWidget {
-  const SizeTransitionApp({Key? key}) : super(key: key);
+class PositionedTransitionApp extends StatefulWidget {
+  const PositionedTransitionApp({Key? key}) : super(key: key);
 
   @override
-  State<SizeTransitionApp> createState() => _SizeTransitionAppState();
+  State<PositionedTransitionApp> createState() =>
+      _PositionedTransitionAppState();
 }
 
-class _SizeTransitionAppState extends State<SizeTransitionApp>
+class _PositionedTransitionAppState extends State<PositionedTransitionApp>
     with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 3),
     vsync: this,
   )..repeat();
-  late final Animation<double> _animation = CurvedAnimation(
-    parent: _controller,
-    curve: Curves.fastOutSlowIn,
-  );
 
   @override
   void dispose() {
@@ -26,19 +23,37 @@ class _SizeTransitionAppState extends State<SizeTransitionApp>
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    const double smallLogo = 100;
+    const double bigLogo = 200;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Spacer'),
       ),
       body: Center(
-        child: SizeTransition(
-          sizeFactor: _animation,
-          axis: Axis.vertical,
-          axisAlignment: -1,
-          child: const Center(
-            child: FlutterLogo(size: 200.0),
-          ),
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            final Size biggest = constraints.biggest;
+            return Stack(
+              children: <Widget>[
+                PositionedTransition(
+                  rect: RelativeRectTween(
+                    begin: RelativeRect.fromSize(
+                        Rect.fromLTWH(0, 0, smallLogo, smallLogo), biggest),
+                    end: RelativeRect.fromSize(
+                        Rect.fromLTWH(biggest.width - bigLogo,
+                            biggest.height - bigLogo, bigLogo, bigLogo),
+                        biggest),
+                  ).animate(CurvedAnimation(
+                    parent: _controller,
+                    curve: Curves.elasticInOut,
+                  )),
+                  child: const Padding(
+                      padding: EdgeInsets.all(8), child: FlutterLogo()),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );

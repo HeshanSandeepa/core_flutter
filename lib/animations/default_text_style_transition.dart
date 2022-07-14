@@ -1,22 +1,39 @@
 import 'package:flutter/material.dart';
 
-class SizeTransitionApp extends StatefulWidget {
-  const SizeTransitionApp({Key? key}) : super(key: key);
+class DefaultTextStyleTransitionApp extends StatefulWidget {
+  const DefaultTextStyleTransitionApp({Key? key}) : super(key: key);
 
   @override
-  State<SizeTransitionApp> createState() => _SizeTransitionAppState();
+  State<DefaultTextStyleTransitionApp> createState() =>
+      _DefaultTextStyleTransitionAppState();
 }
 
-class _SizeTransitionAppState extends State<SizeTransitionApp>
-    with TickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(
-    duration: const Duration(seconds: 3),
-    vsync: this,
-  )..repeat();
-  late final Animation<double> _animation = CurvedAnimation(
-    parent: _controller,
-    curve: Curves.fastOutSlowIn,
-  );
+class _DefaultTextStyleTransitionAppState
+    extends State<DefaultTextStyleTransitionApp> with TickerProviderStateMixin {
+  late AnimationController _controller;
+  late TextStyleTween _styleTween;
+  late CurvedAnimation _curvedAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    )..repeat(reverse: true);
+    _styleTween = TextStyleTween(
+      begin: const TextStyle(
+          fontSize: 50, color: Colors.blue, fontWeight: FontWeight.w900),
+      end: TextStyle(
+          fontSize: 50,
+          color: Colors.blue.shade200,
+          fontWeight: FontWeight.w100),
+    );
+    _curvedAnimation = CurvedAnimation(
+      parent: _controller,
+      curve: Curves.elasticInOut,
+    );
+  }
 
   @override
   void dispose() {
@@ -32,13 +49,9 @@ class _SizeTransitionAppState extends State<SizeTransitionApp>
         title: const Text('Flutter Spacer'),
       ),
       body: Center(
-        child: SizeTransition(
-          sizeFactor: _animation,
-          axis: Axis.vertical,
-          axisAlignment: -1,
-          child: const Center(
-            child: FlutterLogo(size: 200.0),
-          ),
+        child: DefaultTextStyleTransition(
+          style: _styleTween.animate(_curvedAnimation),
+          child: const Text('Flutter'),
         ),
       ),
     );

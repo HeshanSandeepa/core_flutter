@@ -26,7 +26,6 @@ class _SizeTransitionAppState extends State<SizeTransitionApp>
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Spacer'),

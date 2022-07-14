@@ -1,21 +1,40 @@
 import 'package:flutter/material.dart';
 
-class SizeTransitionApp extends StatefulWidget {
-  const SizeTransitionApp({Key? key}) : super(key: key);
+class DecoratedBoxTransitionApp extends StatefulWidget {
+  const DecoratedBoxTransitionApp({Key? key}) : super(key: key);
 
   @override
-  State<SizeTransitionApp> createState() => _SizeTransitionAppState();
+  State<DecoratedBoxTransitionApp> createState() => _DecoratedBoxTransitionAppState();
 }
 
-class _SizeTransitionAppState extends State<SizeTransitionApp>
+class _DecoratedBoxTransitionAppState extends State<DecoratedBoxTransitionApp>
     with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 3),
     vsync: this,
-  )..repeat();
-  late final Animation<double> _animation = CurvedAnimation(
-    parent: _controller,
-    curve: Curves.fastOutSlowIn,
+  )..repeat(reverse: true);
+  final DecorationTween decorationTween = DecorationTween(
+    begin: BoxDecoration(
+      color: const Color(0xFFFFFFFF),
+      border: Border.all(style: BorderStyle.none),
+      borderRadius: BorderRadius.circular(60.0),
+      boxShadow: const <BoxShadow>[
+        BoxShadow(
+          color: Color(0x66666666),
+          blurRadius: 10.0,
+          spreadRadius: 3.0,
+          offset: Offset(0, 6.0),
+        )
+      ],
+    ),
+    end: BoxDecoration(
+      color: const Color(0xFFFFFFFF),
+      border: Border.all(
+        style: BorderStyle.none,
+      ),
+      borderRadius: BorderRadius.zero,
+      // No shadow.
+    ),
   );
 
   @override
@@ -26,18 +45,18 @@ class _SizeTransitionAppState extends State<SizeTransitionApp>
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Spacer'),
       ),
       body: Center(
-        child: SizeTransition(
-          sizeFactor: _animation,
-          axis: Axis.vertical,
-          axisAlignment: -1,
-          child: const Center(
-            child: FlutterLogo(size: 200.0),
+        child: DecoratedBoxTransition(
+          decoration: decorationTween.animate(_controller),
+          child: Container(
+            width: 200,
+            height: 200,
+            padding: const EdgeInsets.all(10),
+            child: const FlutterLogo(),
           ),
         ),
       ),

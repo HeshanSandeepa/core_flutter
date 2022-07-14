@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class SizeTransitionApp extends StatefulWidget {
-  const SizeTransitionApp({Key? key}) : super(key: key);
+class ScaleTransitionApp extends StatefulWidget {
+  const ScaleTransitionApp({Key? key}) : super(key: key);
 
   @override
-  State<SizeTransitionApp> createState() => _SizeTransitionAppState();
+  State<ScaleTransitionApp> createState() => _ScaleTransitionAppState();
 }
 
-class _SizeTransitionAppState extends State<SizeTransitionApp>
+class _ScaleTransitionAppState extends State<ScaleTransitionApp>
     with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 3),
     vsync: this,
-  )..repeat();
+  )..repeat(reverse: true);
   late final Animation<double> _animation = CurvedAnimation(
     parent: _controller,
     curve: Curves.fastOutSlowIn,
@@ -26,18 +26,16 @@ class _SizeTransitionAppState extends State<SizeTransitionApp>
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Spacer'),
       ),
       body: Center(
-        child: SizeTransition(
-          sizeFactor: _animation,
-          axis: Axis.vertical,
-          axisAlignment: -1,
-          child: const Center(
-            child: FlutterLogo(size: 200.0),
+        child: ScaleTransition(
+          scale: _animation,
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: FlutterLogo(size: 150.0),
           ),
         ),
       ),
