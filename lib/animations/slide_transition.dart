@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 
-class SizeTransitionApp extends StatefulWidget {
-  const SizeTransitionApp({Key? key}) : super(key: key);
+class SlideTransitionApp extends StatefulWidget {
+  const SlideTransitionApp({Key? key}) : super(key: key);
 
   @override
-  State<SizeTransitionApp> createState() => _SizeTransitionAppState();
+  State<SlideTransitionApp> createState() => _SlideTransitionAppState();
 }
 
-class _SizeTransitionAppState extends State<SizeTransitionApp>
+class _SlideTransitionAppState extends State<SlideTransitionApp>
     with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 3),
     vsync: this,
   )..repeat();
-  late final Animation<double> _animation = CurvedAnimation(
+  late final Animation<Offset> _offsetAnimation = Tween<Offset>(
+    begin: Offset.zero,
+    end: const Offset(1.5, 0.0),
+  ).animate(CurvedAnimation(
     parent: _controller,
-    curve: Curves.fastOutSlowIn,
-  );
+    curve: Curves.elasticIn,
+  ));
 
   @override
   void dispose() {
@@ -26,18 +29,16 @@ class _SizeTransitionAppState extends State<SizeTransitionApp>
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Spacer'),
       ),
       body: Center(
-        child: SizeTransition(
-          sizeFactor: _animation,
-          axis: Axis.vertical,
-          axisAlignment: -1,
-          child: const Center(
-            child: FlutterLogo(size: 200.0),
+        child: SlideTransition(
+          position: _offsetAnimation,
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: FlutterLogo(size: 150.0),
           ),
         ),
       ),

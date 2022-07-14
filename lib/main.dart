@@ -31,7 +31,15 @@ import 'package:flutter_core/widget_of_the_week/spacer.dart';
 import 'package:flutter_core/widget_of_the_week/stack.dart';
 import 'package:flutter_core/widget_of_the_week/stacked_index.dart';
 
+import 'animations/align_transition.dart';
+import 'animations/decoratedbox_transition.dart';
+import 'animations/default_text_style_transition.dart';
+import 'animations/fade_transition.dart';
+import 'animations/positioned_transition.dart';
+import 'animations/rotation_transition.dart';
+import 'animations/scale_transition.dart';
 import 'animations/size_transition.dart';
+import 'animations/slide_transition.dart';
 import 'async_coding/future_async_await.dart';
 import 'async_coding/isolate.dart';
 import 'flutter_in_focus/generators.dart';
@@ -54,7 +62,7 @@ class MyApp extends StatelessWidget {
             iconTheme: MaterialStateProperty.all(IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: SizeTransitionApp(),
+      home: SlideTransitionApp(),
     );
   }
 }
