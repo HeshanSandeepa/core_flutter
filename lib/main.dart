@@ -18,6 +18,7 @@ import 'package:flutter_core/widget_of_the_week/cupertino_action_sheet.dart';
 import 'package:flutter_core/widget_of_the_week/data_table.dart';
 import 'package:flutter_core/widget_of_the_week/draggable.dart';
 import 'package:flutter_core/widget_of_the_week/draggable_scrollable_sheet.dart';
+import 'package:flutter_core/widget_of_the_week/drawer.dart';
 import 'package:flutter_core/widget_of_the_week/flexible.dart';
 import 'package:flutter_core/widget_of_the_week/fractional_sized_box.dart';
 import 'package:flutter_core/widget_of_the_week/image.dart';
@@ -33,6 +34,7 @@ import 'package:flutter_core/widget_of_the_week/slider.dart';
 import 'package:flutter_core/widget_of_the_week/spacer.dart';
 import 'package:flutter_core/widget_of_the_week/stack.dart';
 import 'package:flutter_core/widget_of_the_week/stacked_index.dart';
+import 'package:flutter_core/widget_of_the_week/tab_controller.dart';
 import 'package:flutter_core/widget_of_the_week/toggle_button.dart';
 
 import 'animations/align_transition.dart';
@@ -66,7 +68,7 @@ class MyApp extends StatelessWidget {
             iconTheme: MaterialStateProperty.all(IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: ImageApp(),
+      home: TapApp(),
     );
   }
 }
