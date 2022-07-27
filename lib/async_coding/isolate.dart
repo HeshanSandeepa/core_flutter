@@ -36,7 +36,7 @@ Future<List<Photo>> fetchPhotos(http.Client client) async {
       .get(Uri.parse('https://jsonplaceholder.typicode.com/photos'));
 
   // Use the compute function to run parsePhotos in a separate isolate.
-  //return parsePhotos(response.body);
+  // return parsePhotos(response.body);
   return compute(parsePhotos, response.body);
 
 }
@@ -60,7 +60,7 @@ class _IsolateAppState extends State<IsolateApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Isolate'),
+        title: const Text('Isolate'),
       ),
       body: FutureBuilder<List<Photo>>(
         future: fetchPhotos(http.Client()),
