@@ -11,11 +11,14 @@ import 'package:flutter_core/widget_of_the_week/animated_padding.dart';
 import 'package:flutter_core/widget_of_the_week/animated_positioned.dart';
 import 'package:flutter_core/widget_of_the_week/animated_switcher.dart';
 import 'package:flutter_core/widget_of_the_week/aspect_ratio.dart';
+import 'package:flutter_core/widget_of_the_week/builder.dart';
+import 'package:flutter_core/widget_of_the_week/clip_path.dart';
 import 'package:flutter_core/widget_of_the_week/color_filtered.dart';
 import 'package:flutter_core/widget_of_the_week/constraint_box.dart';
 import 'package:flutter_core/widget_of_the_week/container.dart';
 import 'package:flutter_core/widget_of_the_week/cupertino_action_sheet.dart';
 import 'package:flutter_core/widget_of_the_week/data_table.dart';
+import 'package:flutter_core/widget_of_the_week/divider.dart';
 import 'package:flutter_core/widget_of_the_week/draggable.dart';
 import 'package:flutter_core/widget_of_the_week/draggable_scrollable_sheet.dart';
 import 'package:flutter_core/widget_of_the_week/drawer.dart';
@@ -29,6 +32,7 @@ import 'package:flutter_core/widget_of_the_week/list_wheel_scroll_view.dart';
 import 'package:flutter_core/widget_of_the_week/media_query.dart';
 import 'package:flutter_core/widget_of_the_week/notification_listener.dart';
 import 'package:flutter_core/widget_of_the_week/place_holder.dart';
+import 'package:flutter_core/widget_of_the_week/progress_indicator.dart';
 import 'package:flutter_core/widget_of_the_week/reorderable_list_view.dart';
 import 'package:flutter_core/widget_of_the_week/rich_text.dart';
 import 'package:flutter_core/widget_of_the_week/selectable_text.dart';
@@ -72,7 +76,7 @@ class MyApp extends StatelessWidget {
             iconTheme: MaterialStateProperty.all(IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: NotificationListenerApp(),
+      home: DividerApp(),
     );
   }
 }
