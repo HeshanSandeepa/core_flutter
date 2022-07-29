@@ -12,11 +12,13 @@ import 'package:flutter_core/widget_of_the_week/animated_positioned.dart';
 import 'package:flutter_core/widget_of_the_week/animated_switcher.dart';
 import 'package:flutter_core/widget_of_the_week/aspect_ratio.dart';
 import 'package:flutter_core/widget_of_the_week/builder.dart';
+import 'package:flutter_core/widget_of_the_week/clip_oval.dart';
 import 'package:flutter_core/widget_of_the_week/clip_path.dart';
 import 'package:flutter_core/widget_of_the_week/color_filtered.dart';
 import 'package:flutter_core/widget_of_the_week/constraint_box.dart';
 import 'package:flutter_core/widget_of_the_week/container.dart';
 import 'package:flutter_core/widget_of_the_week/cupertino_action_sheet.dart';
+import 'package:flutter_core/widget_of_the_week/cupertino_activity_indicator.dart';
 import 'package:flutter_core/widget_of_the_week/data_table.dart';
 import 'package:flutter_core/widget_of_the_week/divider.dart';
 import 'package:flutter_core/widget_of_the_week/draggable.dart';
@@ -24,6 +26,7 @@ import 'package:flutter_core/widget_of_the_week/draggable_scrollable_sheet.dart'
 import 'package:flutter_core/widget_of_the_week/drawer.dart';
 import 'package:flutter_core/widget_of_the_week/flexible.dart';
 import 'package:flutter_core/widget_of_the_week/fractional_sized_box.dart';
+import 'package:flutter_core/widget_of_the_week/ignore_pointer.dart';
 import 'package:flutter_core/widget_of_the_week/image.dart';
 import 'package:flutter_core/widget_of_the_week/limited_box.dart';
 import 'package:flutter_core/widget_of_the_week/list_tile.dart';
@@ -73,10 +76,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         navigationBarTheme: NavigationBarThemeData(
             height: 80,
-            iconTheme: MaterialStateProperty.all(IconThemeData(size: 50.0))),
+            iconTheme:
+                MaterialStateProperty.all(const IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: DividerApp(),
+      home: ClipOvalApp(),
     );
   }
 }
