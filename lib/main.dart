@@ -10,6 +10,7 @@ import 'package:flutter_core/widget_of_the_week/animated_opacity.dart';
 import 'package:flutter_core/widget_of_the_week/animated_padding.dart';
 import 'package:flutter_core/widget_of_the_week/animated_positioned.dart';
 import 'package:flutter_core/widget_of_the_week/animated_switcher.dart';
+import 'package:flutter_core/widget_of_the_week/animated_widget.dart';
 import 'package:flutter_core/widget_of_the_week/aspect_ratio.dart';
 import 'package:flutter_core/widget_of_the_week/builder.dart';
 import 'package:flutter_core/widget_of_the_week/clip_oval.dart';
@@ -34,6 +35,7 @@ import 'package:flutter_core/widget_of_the_week/list_view.dart';
 import 'package:flutter_core/widget_of_the_week/list_wheel_scroll_view.dart';
 import 'package:flutter_core/widget_of_the_week/media_query.dart';
 import 'package:flutter_core/widget_of_the_week/notification_listener.dart';
+import 'package:flutter_core/widget_of_the_week/padding.dart';
 import 'package:flutter_core/widget_of_the_week/place_holder.dart';
 import 'package:flutter_core/widget_of_the_week/progress_indicator.dart';
 import 'package:flutter_core/widget_of_the_week/reorderable_list_view.dart';
@@ -80,7 +82,7 @@ class MyApp extends StatelessWidget {
                 MaterialStateProperty.all(const IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: ClipOvalApp(),
+      home: PaddingApp(),
     );
   }
 }
