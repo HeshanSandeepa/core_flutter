@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_core/async_coding/streams.dart';
 import 'package:flutter_core/state_management/inherited_widget.dart';
+import 'package:flutter_core/widget_of_the_week/about_dialog.dart';
 import 'package:flutter_core/widget_of_the_week/alerts.dart';
 import 'package:flutter_core/widget_of_the_week/animated_container.dart';
 import 'package:flutter_core/widget_of_the_week/animated_cross_fade.dart';
@@ -13,6 +14,7 @@ import 'package:flutter_core/widget_of_the_week/animated_switcher.dart';
 import 'package:flutter_core/widget_of_the_week/animated_widget.dart';
 import 'package:flutter_core/widget_of_the_week/aspect_ratio.dart';
 import 'package:flutter_core/widget_of_the_week/builder.dart';
+import 'package:flutter_core/widget_of_the_week/check_box_list_tile.dart';
 import 'package:flutter_core/widget_of_the_week/clip_oval.dart';
 import 'package:flutter_core/widget_of_the_week/clip_path.dart';
 import 'package:flutter_core/widget_of_the_week/color_filtered.dart';
@@ -82,7 +84,7 @@ class MyApp extends StatelessWidget {
                 MaterialStateProperty.all(const IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: PaddingApp(),
+      home: CheckBoxListTitleApp(),
     );
   }
 }
