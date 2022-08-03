@@ -17,15 +17,18 @@ class _CheckBoxListTitleAppState extends State<CheckBoxListTitleApp> {
         title: const Text('Flutter Spacer'),
       ),
       body: Center(
-          child: CheckboxListTile(
-        title: const Text('Animate Slowly'),
-        value: timeDilation != 1.0,
-        onChanged: (bool? value) {
-          setState(() {
-            timeDilation = value! ? 10.0 : 1.0;
-          });
-        },
-        secondary: const Icon(Icons.hourglass_empty),
+          child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: CheckboxListTile(
+          title: const Text('Animate Slowly'),
+          value: timeDilation != 1.0,
+          onChanged: (bool? value) {
+            setState(() {
+              timeDilation = value! ? 10.0 : 1.0;
+            });
+          },
+          secondary: const Icon(Icons.hourglass_empty),
+        ),
       )),
     );
   }
