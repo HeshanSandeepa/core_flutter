@@ -84,7 +84,7 @@ class MyApp extends StatelessWidget {
                 MaterialStateProperty.all(const IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: CheckBoxListTitleApp(),
+      home: const CheckBoxListTitleApp(),
     );
   }
 }
