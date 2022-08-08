@@ -32,6 +32,7 @@ import 'package:flutter_core/widget_of_the_week/fractional_sized_box.dart';
 import 'package:flutter_core/widget_of_the_week/grid.dart';
 import 'package:flutter_core/widget_of_the_week/ignore_pointer.dart';
 import 'package:flutter_core/widget_of_the_week/image.dart';
+import 'package:flutter_core/widget_of_the_week/image_filtered.dart';
 import 'package:flutter_core/widget_of_the_week/interactive_viewer.dart';
 import 'package:flutter_core/widget_of_the_week/limited_box.dart';
 import 'package:flutter_core/widget_of_the_week/list_tile.dart';
@@ -40,6 +41,7 @@ import 'package:flutter_core/widget_of_the_week/list_wheel_scroll_view.dart';
 import 'package:flutter_core/widget_of_the_week/media_query.dart';
 import 'package:flutter_core/widget_of_the_week/notification_listener.dart';
 import 'package:flutter_core/widget_of_the_week/padding.dart';
+import 'package:flutter_core/widget_of_the_week/physical_model.dart';
 import 'package:flutter_core/widget_of_the_week/place_holder.dart';
 import 'package:flutter_core/widget_of_the_week/progress_indicator.dart';
 import 'package:flutter_core/widget_of_the_week/reorderable_list_view.dart';
@@ -52,6 +54,7 @@ import 'package:flutter_core/widget_of_the_week/snack_bar.dart';
 import 'package:flutter_core/widget_of_the_week/spacer.dart';
 import 'package:flutter_core/widget_of_the_week/stack.dart';
 import 'package:flutter_core/widget_of_the_week/stacked_index.dart';
+import 'package:flutter_core/widget_of_the_week/switch_list_tile.dart';
 import 'package:flutter_core/widget_of_the_week/tab_controller.dart';
 import 'package:flutter_core/widget_of_the_week/toggle_button.dart';
 
@@ -87,7 +90,7 @@ class MyApp extends StatelessWidget {
                 MaterialStateProperty.all(const IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: const GridViewApp(),
+      home: const PhysicalModelApp(),
     );
   }
 }
