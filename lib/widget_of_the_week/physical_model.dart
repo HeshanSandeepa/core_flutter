@@ -14,12 +14,12 @@ class _PhysicalModelAppState extends State<PhysicalModelApp> {
       appBar: AppBar(
         title: const Text('Flutter Stack'),
       ),
-      body: Center(
+      body: const Center(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0),
           child: PhysicalModel(
             elevation: 20,
-            child: Container(
+            child: SizedBox(
               height: 200,
               width: 200,
             ),
