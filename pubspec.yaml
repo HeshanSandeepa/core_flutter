@@ -37,6 +37,7 @@ dependencies:
   path:
   webview_flutter: ^3.0.2
   http: ^0.13.1
+  flutter_slidable: ^1.3.0
 
 dev_dependencies:
   flutter_test:

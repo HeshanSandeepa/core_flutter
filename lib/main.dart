@@ -27,7 +27,9 @@ import 'package:flutter_core/widget_of_the_week/divider.dart';
 import 'package:flutter_core/widget_of_the_week/draggable.dart';
 import 'package:flutter_core/widget_of_the_week/draggable_scrollable_sheet.dart';
 import 'package:flutter_core/widget_of_the_week/drawer.dart';
+import 'package:flutter_core/widget_of_the_week/expansion_panel_list.dart';
 import 'package:flutter_core/widget_of_the_week/flexible.dart';
+import 'package:flutter_core/widget_of_the_week/flutter_slidable.dart';
 import 'package:flutter_core/widget_of_the_week/fractional_sized_box.dart';
 import 'package:flutter_core/widget_of_the_week/grid.dart';
 import 'package:flutter_core/widget_of_the_week/ignore_pointer.dart';
@@ -46,6 +48,7 @@ import 'package:flutter_core/widget_of_the_week/place_holder.dart';
 import 'package:flutter_core/widget_of_the_week/progress_indicator.dart';
 import 'package:flutter_core/widget_of_the_week/reorderable_list_view.dart';
 import 'package:flutter_core/widget_of_the_week/rich_text.dart';
+import 'package:flutter_core/widget_of_the_week/rotated_box.dart';
 import 'package:flutter_core/widget_of_the_week/selectable_text.dart';
 import 'package:flutter_core/widget_of_the_week/shader_mask.dart';
 import 'package:flutter_core/widget_of_the_week/slider.dart';
@@ -90,7 +93,7 @@ class MyApp extends StatelessWidget {
                 MaterialStateProperty.all(const IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: const PhysicalModelApp(),
+      home: const ExpansionPanelListApp(),
     );
   }
 }
