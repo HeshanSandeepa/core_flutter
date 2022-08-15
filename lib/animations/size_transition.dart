@@ -34,7 +34,7 @@ class _SizeTransitionAppState extends State<SizeTransitionApp>
         child: SizeTransition(
           sizeFactor: _animation,
           axis: Axis.vertical,
-          axisAlignment: -1,
+          axisAlignment: 0,
           child: const Center(
             child: FlutterLogo(size: 200.0),
           ),

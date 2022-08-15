@@ -49,6 +49,7 @@ import 'package:flutter_core/widget_of_the_week/progress_indicator.dart';
 import 'package:flutter_core/widget_of_the_week/reorderable_list_view.dart';
 import 'package:flutter_core/widget_of_the_week/rich_text.dart';
 import 'package:flutter_core/widget_of_the_week/rotated_box.dart';
+import 'package:flutter_core/widget_of_the_week/scroll_bar.dart';
 import 'package:flutter_core/widget_of_the_week/selectable_text.dart';
 import 'package:flutter_core/widget_of_the_week/shader_mask.dart';
 import 'package:flutter_core/widget_of_the_week/slider.dart';
@@ -72,6 +73,7 @@ import 'animations/size_transition.dart';
 import 'animations/slide_transition.dart';
 import 'async_coding/future_async_await.dart';
 import 'async_coding/isolate.dart';
+import 'decoding_flutter/life_of_widget.dart';
 import 'flutter_in_focus/generators.dart';
 
 void main() {
@@ -93,7 +95,7 @@ class MyApp extends StatelessWidget {
                 MaterialStateProperty.all(const IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home: const ExpansionPanelListApp(),
+      home:  const LifeOfWidgetApp(),
     );
   }
 }
