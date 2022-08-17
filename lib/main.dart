@@ -29,9 +29,11 @@ import 'package:flutter_core/widget_of_the_week/draggable_scrollable_sheet.dart'
 import 'package:flutter_core/widget_of_the_week/drawer.dart';
 import 'package:flutter_core/widget_of_the_week/expansion_panel_list.dart';
 import 'package:flutter_core/widget_of_the_week/flexible.dart';
+import 'package:flutter_core/widget_of_the_week/flow.dart';
 import 'package:flutter_core/widget_of_the_week/flutter_slidable.dart';
 import 'package:flutter_core/widget_of_the_week/fractional_sized_box.dart';
 import 'package:flutter_core/widget_of_the_week/grid.dart';
+import 'package:flutter_core/widget_of_the_week/hero_animation.dart';
 import 'package:flutter_core/widget_of_the_week/ignore_pointer.dart';
 import 'package:flutter_core/widget_of_the_week/image.dart';
 import 'package:flutter_core/widget_of_the_week/image_filtered.dart';
@@ -41,11 +43,13 @@ import 'package:flutter_core/widget_of_the_week/list_tile.dart';
 import 'package:flutter_core/widget_of_the_week/list_view.dart';
 import 'package:flutter_core/widget_of_the_week/list_wheel_scroll_view.dart';
 import 'package:flutter_core/widget_of_the_week/media_query.dart';
+import 'package:flutter_core/widget_of_the_week/mouse_region.dart';
 import 'package:flutter_core/widget_of_the_week/notification_listener.dart';
 import 'package:flutter_core/widget_of_the_week/padding.dart';
 import 'package:flutter_core/widget_of_the_week/physical_model.dart';
 import 'package:flutter_core/widget_of_the_week/place_holder.dart';
 import 'package:flutter_core/widget_of_the_week/progress_indicator.dart';
+import 'package:flutter_core/widget_of_the_week/refresh_indicator.dart';
 import 'package:flutter_core/widget_of_the_week/reorderable_list_view.dart';
 import 'package:flutter_core/widget_of_the_week/rich_text.dart';
 import 'package:flutter_core/widget_of_the_week/rotated_box.dart';
@@ -95,7 +99,7 @@ class MyApp extends StatelessWidget {
                 MaterialStateProperty.all(const IconThemeData(size: 50.0))),
         primarySwatch: Colors.blue,
       ),
-      home:  const LifeOfWidgetApp(),
+      home:  const FlowApp(),
     );
   }
 }
