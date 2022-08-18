@@ -64,6 +64,7 @@ import 'package:flutter_core/widget_of_the_week/stack.dart';
 import 'package:flutter_core/widget_of_the_week/stacked_index.dart';
 import 'package:flutter_core/widget_of_the_week/switch_list_tile.dart';
 import 'package:flutter_core/widget_of_the_week/tab_controller.dart';
+import 'package:flutter_core/widget_of_the_week/tab_page_selector.dart';
 import 'package:flutter_core/widget_of_the_week/toggle_button.dart';
 
 import 'animations/align_transition.dart';
@@ -93,13 +94,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Core',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.green.shade100,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green),
         navigationBarTheme: NavigationBarThemeData(
             height: 80,
             iconTheme:
                 MaterialStateProperty.all(const IconThemeData(size: 50.0))),
-        primarySwatch: Colors.blue,
+
       ),
-      home:  const FlowApp(),
+
+     // darkTheme: ThemeData.dark(),
+      home:  const RefreshIndicatorApp(),
     );
   }
 }

@@ -40,7 +40,7 @@ class _FlowAppState extends State<FlowApp> with SingleTickerProviderStateMixin {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Container(
         color: Colors.transparent,
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: RawMaterialButton(
           fillColor: lastTapped == icon ? Colors.amber[700] : Colors.blue,
           splashColor: Colors.amber[100],
