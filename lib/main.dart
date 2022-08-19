@@ -32,6 +32,7 @@ import 'package:flutter_core/widget_of_the_week/flexible.dart';
 import 'package:flutter_core/widget_of_the_week/flow.dart';
 import 'package:flutter_core/widget_of_the_week/flutter_slidable.dart';
 import 'package:flutter_core/widget_of_the_week/fractional_sized_box.dart';
+import 'package:flutter_core/widget_of_the_week/gesture_detector.dart';
 import 'package:flutter_core/widget_of_the_week/grid.dart';
 import 'package:flutter_core/widget_of_the_week/hero_animation.dart';
 import 'package:flutter_core/widget_of_the_week/ignore_pointer.dart';
@@ -104,7 +105,7 @@ class MyApp extends StatelessWidget {
       ),
 
      // darkTheme: ThemeData.dark(),
-      home:  const RefreshIndicatorApp(),
+      home:  const GestureDetectorApp(),
     );
   }
 }
