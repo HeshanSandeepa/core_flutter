@@ -13,6 +13,7 @@ import 'package:flutter_core/widget_of_the_week/animated_positioned.dart';
 import 'package:flutter_core/widget_of_the_week/animated_switcher.dart';
 import 'package:flutter_core/widget_of_the_week/animated_widget.dart';
 import 'package:flutter_core/widget_of_the_week/aspect_ratio.dart';
+import 'package:flutter_core/widget_of_the_week/base_line.dart';
 import 'package:flutter_core/widget_of_the_week/builder.dart';
 import 'package:flutter_core/widget_of_the_week/check_box_list_tile.dart';
 import 'package:flutter_core/widget_of_the_week/clip_oval.dart';
@@ -105,7 +106,7 @@ class MyApp extends StatelessWidget {
       ),
 
      // darkTheme: ThemeData.dark(),
-      home:  const GestureDetectorApp(),
+      home:  const BaseLineApp(),
     );
   }
 }
