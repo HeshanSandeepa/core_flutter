@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_core/async_coding/streams.dart';
 import 'package:flutter_core/state_management/inherited_widget.dart';
 import 'package:flutter_core/widget_of_the_week/about_dialog.dart';
@@ -54,6 +55,7 @@ import 'package:flutter_core/widget_of_the_week/place_holder.dart';
 import 'package:flutter_core/widget_of_the_week/progress_indicator.dart';
 import 'package:flutter_core/widget_of_the_week/refresh_indicator.dart';
 import 'package:flutter_core/widget_of_the_week/reorderable_list_view.dart';
+import 'package:flutter_core/widget_of_the_week/repaint_boundary.dart';
 import 'package:flutter_core/widget_of_the_week/rich_text.dart';
 import 'package:flutter_core/widget_of_the_week/rotated_box.dart';
 import 'package:flutter_core/widget_of_the_week/scroll_bar.dart';
@@ -108,7 +110,7 @@ class MyApp extends StatelessWidget {
       ),
 
      // darkTheme: ThemeData.dark(),
-      home:  const StateFulBuilderApp(),
+      home:  const RepaintBoundaryApp(),
     );
   }
 }
