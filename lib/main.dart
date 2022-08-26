@@ -34,6 +34,7 @@ import 'package:flutter_core/widget_of_the_week/expansion_panel_list.dart';
 import 'package:flutter_core/widget_of_the_week/flexible.dart';
 import 'package:flutter_core/widget_of_the_week/flow.dart';
 import 'package:flutter_core/widget_of_the_week/flutter_slidable.dart';
+import 'package:flutter_core/widget_of_the_week/focusable_action_detector.dart';
 import 'package:flutter_core/widget_of_the_week/fractional_sized_box.dart';
 import 'package:flutter_core/widget_of_the_week/gesture_detector.dart';
 import 'package:flutter_core/widget_of_the_week/grid.dart';
@@ -110,7 +111,7 @@ class MyApp extends StatelessWidget {
       ),
 
      // darkTheme: ThemeData.dark(),
-      home:  const RepaintBoundaryApp(),
+      home:  const FocusableActionDetectorApp(),
     );
   }
 }
