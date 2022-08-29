@@ -14,6 +14,7 @@ import 'package:flutter_core/widget_of_the_week/animated_positioned.dart';
 import 'package:flutter_core/widget_of_the_week/animated_switcher.dart';
 import 'package:flutter_core/widget_of_the_week/animated_widget.dart';
 import 'package:flutter_core/widget_of_the_week/aspect_ratio.dart';
+import 'package:flutter_core/widget_of_the_week/auto_complete.dart';
 import 'package:flutter_core/widget_of_the_week/base_line.dart';
 import 'package:flutter_core/widget_of_the_week/builder.dart';
 import 'package:flutter_core/widget_of_the_week/check_box_list_tile.dart';
@@ -44,11 +45,13 @@ import 'package:flutter_core/widget_of_the_week/image.dart';
 import 'package:flutter_core/widget_of_the_week/image_filtered.dart';
 import 'package:flutter_core/widget_of_the_week/interactive_viewer.dart';
 import 'package:flutter_core/widget_of_the_week/limited_box.dart';
+import 'package:flutter_core/widget_of_the_week/linear_gradient.dart';
 import 'package:flutter_core/widget_of_the_week/list_tile.dart';
 import 'package:flutter_core/widget_of_the_week/list_view.dart';
 import 'package:flutter_core/widget_of_the_week/list_wheel_scroll_view.dart';
 import 'package:flutter_core/widget_of_the_week/media_query.dart';
 import 'package:flutter_core/widget_of_the_week/mouse_region.dart';
+import 'package:flutter_core/widget_of_the_week/navigation_rail.dart';
 import 'package:flutter_core/widget_of_the_week/notification_listener.dart';
 import 'package:flutter_core/widget_of_the_week/padding.dart';
 import 'package:flutter_core/widget_of_the_week/physical_model.dart';
@@ -111,7 +114,7 @@ class MyApp extends StatelessWidget {
       ),
 
      // darkTheme: ThemeData.dark(),
-      home:  const FocusableActionDetectorApp(),
+      home:  const LinearGradientApp(),
     );
   }
 }
