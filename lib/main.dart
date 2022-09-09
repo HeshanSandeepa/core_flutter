@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_core/async_coding/streams.dart';
@@ -89,6 +90,7 @@ import 'animations/slide_transition.dart';
 import 'async_coding/future_async_await.dart';
 import 'async_coding/isolate.dart';
 import 'decoding_flutter/life_of_widget.dart';
+import 'flutter_in_focus/debug_properties.dart';
 import 'flutter_in_focus/generators.dart';
 
 void main() {
@@ -110,11 +112,34 @@ class MyApp extends StatelessWidget {
             height: 80,
             iconTheme:
                 MaterialStateProperty.all(const IconThemeData(size: 50.0))),
-
       ),
 
-     // darkTheme: ThemeData.dark(),
-      home:  const LinearGradientApp(),
+      // darkTheme: ThemeData.dark(),
+      home: DebugPropertyApp(),
+    );
+  }
+}
+
+class Clickable extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Center(
+        child: RichText(
+          text: TextSpan(
+            text: 'Joe waited for the ',
+            style: DefaultTextStyle.of(context).style,
+            children: <TextSpan>[
+              TextSpan(
+                  text: 'train',
+                  style: const TextStyle(color: Colors.lightBlue),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () => print('click')),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

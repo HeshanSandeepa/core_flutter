@@ -41,8 +41,8 @@ class _StackedIndexAppState extends State<StackedIndexApp> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        FlatButton(
-          color: Colors.pink[300],
+        ElevatedButton(
+          //color: Colors.pink[300],
           child: Text(
             'Red',
             style: TextStyle(fontSize: 16.0, color: Colors.white),
@@ -53,8 +53,8 @@ class _StackedIndexAppState extends State<StackedIndexApp> {
             });
           },
         ),
-        FlatButton(
-          color: Colors.pink[300],
+        ElevatedButton(
+          //color: Colors.pink[300],
           child: Text(
             'Green',
             style: TextStyle(fontSize: 16.0, color: Colors.white),
@@ -65,8 +65,8 @@ class _StackedIndexAppState extends State<StackedIndexApp> {
             });
           },
         ),
-        FlatButton(
-          color: Colors.pink[300],
+        ElevatedButton(
+         // color: Colors.pink[300],
           child: Text(
             'Blue',
             style: TextStyle(fontSize: 16.0, color: Colors.white),

@@ -33,7 +33,7 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
             const SizedBox(
               height: 50,
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Animate'),
               onPressed: () {
                 setState(() {
