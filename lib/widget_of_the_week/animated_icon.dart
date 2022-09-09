@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
@@ -49,7 +47,7 @@ class _AnimatedIconState extends State<AnimatedIconApp>
             SizedBox(
               height: 50,
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('Animate'),
               onPressed: () {
                 if (_flag) {

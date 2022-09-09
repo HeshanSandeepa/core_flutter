@@ -51,6 +51,7 @@ class CurrentScore extends StatelessWidget {
 
     int score = info!.score;
 
+
     return Text(score.toString());
   }
 }
