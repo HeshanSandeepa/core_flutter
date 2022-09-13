@@ -11,7 +11,6 @@ class FocusableActionDetectorApp extends StatefulWidget {
 class _FocusableActionDetectorAppState extends State<FocusableActionDetectorApp> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Spacer'),

@@ -90,6 +90,7 @@ import 'animations/slide_transition.dart';
 import 'async_coding/future_async_await.dart';
 import 'async_coding/isolate.dart';
 import 'decoding_flutter/life_of_widget.dart';
+import 'flutter_in_focus/best_of_state_full_object.dart';
 import 'flutter_in_focus/debug_properties.dart';
 import 'flutter_in_focus/generators.dart';
 
@@ -115,7 +116,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // darkTheme: ThemeData.dark(),
-      home: DebugPropertyApp(),
+      home: StateFullObjectApp(name: 'Name',),
     );
   }
 }
