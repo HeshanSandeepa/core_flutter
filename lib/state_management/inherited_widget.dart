@@ -41,21 +41,6 @@ class _InheritedWidgetAppState extends State<InheritedWidgetApp> {
   }
 }
 
-class CurrentScore extends StatelessWidget {
-  const CurrentScore();
-
-  @override
-  Widget build(BuildContext context) {
-    print('CurrentScore rebuilt');
-    final Info? info = Info.of(context);
-
-    int score = info!.score;
-
-
-    return Text(score.toString());
-  }
-}
-
 class Info extends InheritedWidget {
   final int score;
   const Info({
@@ -70,5 +55,19 @@ class Info extends InheritedWidget {
   @override
   bool updateShouldNotify(covariant Info oldWidget) {
     return oldWidget.score != score;
+  }
+}
+
+class CurrentScore extends StatelessWidget {
+  const CurrentScore();
+
+  @override
+  Widget build(BuildContext context) {
+    print('CurrentScore rebuilt');
+    final Info? info = Info.of(context);
+
+    int score = info!.score;
+
+    return Text(score.toString());
   }
 }

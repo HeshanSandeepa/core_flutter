@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_core/async_coding/streams.dart';
 import 'package:flutter_core/state_management/inherited_widget.dart';
 import 'package:flutter_core/widget_of_the_week/about_dialog.dart';
@@ -93,6 +92,7 @@ import 'decoding_flutter/life_of_widget.dart';
 import 'flutter_in_focus/best_of_state_full_object.dart';
 import 'flutter_in_focus/debug_properties.dart';
 import 'flutter_in_focus/generators.dart';
+import 'flutter_in_focus/inherited_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -116,7 +116,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // darkTheme: ThemeData.dark(),
-      home: StateFullObjectApp(name: 'Name',),
+      home: InheritedWidgetsApp(),
     );
   }
 }
