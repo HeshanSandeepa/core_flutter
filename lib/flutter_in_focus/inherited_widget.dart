@@ -8,7 +8,7 @@ class ImageWidget extends InheritedWidget {
 
   @override
   bool updateShouldNotify(covariant ImageWidget oldWidget) {
-    return true;
+    return baseImage != oldWidget.baseImage;
   }
 
   static ImageWidget of(BuildContext context) {
@@ -28,7 +28,17 @@ class InheritedWidgetsApp extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: ImageWidget(
           child: Builder(builder: (BuildContext innerContext) {
-            return Text(ImageWidget.of(context).baseImage);
+            // ImageWidget? imageWidget = innerContext
+            //     .dependOnInheritedWidgetOfExactType<ImageWidget>();
+            //
+
+            // this is typically replaced by static methods
+
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child:
+                  Center(child: Text(ImageWidget.of(innerContext).baseImage)),
+            );
           }),
           baseImage: 'This is base Url'),
     );
