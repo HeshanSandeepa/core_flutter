@@ -14,7 +14,7 @@ class _BuilderAppState extends State<BuilderApp> {
       appBar: AppBar(
         title: const Text('Flutter Stack'),
       ),
-      body: /*Padding(
+      body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Center(
             child: TextButton(
@@ -25,19 +25,21 @@ class _BuilderAppState extends State<BuilderApp> {
           },
           child: Text('hasAppBar'),
         )),
-      )*/
-          Builder(
-        builder: (BuildContext context) {
-          return Center(
-            child: TextButton(
-              onPressed: () {
-                print(Scaffold.of(context).hasAppBar);
-              },
-              child: Text('hasAppBar'),
-            ),
-          );
-        },
-      ),
+      )
+      //     Builder(
+      //   builder: (BuildContext context) {
+      //     return Center(
+      //       child: TextButton(
+      //         onPressed: () {
+      //           print(Scaffold.of(context).hasAppBar);
+      //         },
+      //         child: Text('hasAppBar'),
+      //       ),
+      //     );
+      //   },
+      // ),
     );
   }
 }
+
+
