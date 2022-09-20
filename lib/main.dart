@@ -93,6 +93,7 @@ import 'flutter_in_focus/best_of_state_full_object.dart';
 import 'flutter_in_focus/debug_properties.dart';
 import 'flutter_in_focus/generators.dart';
 import 'flutter_in_focus/inherited_widget.dart';
+import 'flutter_in_focus/keys.dart';
 
 void main() {
   runApp(const MyApp());
@@ -116,7 +117,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // darkTheme: ThemeData.dark(),
-      home: InheritedWidgetsApp(),
+      home: KeysApp(),
     );
   }
 }

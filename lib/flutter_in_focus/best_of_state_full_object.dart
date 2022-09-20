@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 //https://www.youtube.com/watch?v=AqCMFXEmf3w&list=PLjxrf2q8roU2HdJQDjJzOeO6J3FoFLWr2&index=6
+
+// https://medium.com/@JediPixels/beginning-flutter-widget-tree-and-element-tree-5e2ab953beef
+
 class StateFullObjectApp extends StatefulWidget {
   final String name;
 
