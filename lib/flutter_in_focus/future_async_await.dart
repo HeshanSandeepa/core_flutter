@@ -41,7 +41,6 @@ class _FutureAppState extends State<FutureApp> {
 
   // 05. Handling Errors
   Future<void> printOrderMessage2() async {
-
     try {
       print('Awaiting user order...');
       await fetchUserOrder3();
@@ -49,7 +48,6 @@ class _FutureAppState extends State<FutureApp> {
       print('Caught error: $err');
     }
   }
-
 
   Future<void> fetchUserOrders() async {
     // Imagine that this function is more complex.

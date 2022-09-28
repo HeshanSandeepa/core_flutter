@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_core/async_coding/streams.dart';
 import 'package:flutter_core/state_management/inherited_widget.dart';
 import 'package:flutter_core/widget_of_the_week/about_dialog.dart';
 import 'package:flutter_core/widget_of_the_week/alerts.dart';
@@ -86,12 +85,12 @@ import 'animations/rotation_transition.dart';
 import 'animations/scale_transition.dart';
 import 'animations/size_transition.dart';
 import 'animations/slide_transition.dart';
-import 'async_coding/future_async_await.dart';
-import 'async_coding/isolate.dart';
+import 'flutter_in_focus/future_async_await.dart';
 import 'decoding_flutter/life_of_widget.dart';
 import 'flutter_in_focus/best_of_state_full_object.dart';
 import 'flutter_in_focus/custom_painter.dart';
 import 'flutter_in_focus/debug_properties.dart';
+import 'flutter_in_focus/future_async_await_loop.dart';
 import 'flutter_in_focus/generators.dart';
 import 'flutter_in_focus/inherited_widget.dart';
 import 'flutter_in_focus/keys.dart';
@@ -118,7 +117,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // darkTheme: ThemeData.dark(),
-      home: CustomPainterApp(),
+      home: StreamFutureLoopApp(),
     );
   }
 }
