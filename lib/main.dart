@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_core/state_management/inherited_widget.dart';
 import 'package:flutter_core/widget_of_the_week/about_dialog.dart';
 import 'package:flutter_core/widget_of_the_week/alerts.dart';
@@ -94,9 +95,13 @@ import 'flutter_in_focus/future_async_await_loop.dart';
 import 'flutter_in_focus/generators.dart';
 import 'flutter_in_focus/inherited_widget.dart';
 import 'flutter_in_focus/keys.dart';
+import 'lifecycle/life_cycle_bloc.dart';
+import 'lifecycle/app_life_cycle_widget.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiBlocProvider(
+      providers: [BlocProvider(create: (context) => LifeCycleBloc())],
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -117,7 +122,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // darkTheme: ThemeData.dark(),
-      home: StreamFutureLoopApp(),
+      home: AppLifeCycleWidget(),
     );
   }
 }
