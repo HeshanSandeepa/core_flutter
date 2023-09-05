@@ -25,13 +25,10 @@ class _StreamFutureLoopAppState extends State<StreamFutureLoopApp> {
     Timer.periodic(
       const Duration(seconds: 3),
       (timer) {
-
         int value = Random().nextInt(150);
         intStream.add(value);
 
         getTotal(_intStream);
-
-
       },
     );
   }
