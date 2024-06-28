@@ -35,7 +35,7 @@ class _AnimatedSwitcherAppState extends State<AnimatedSwitcherApp> {
                   // child each time the count changes, so that it will begin its animation
                   // when the count changes.
                   key: ValueKey<int>(_count),
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
               ElevatedButton(

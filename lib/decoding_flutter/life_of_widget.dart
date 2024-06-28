@@ -64,7 +64,7 @@ class _LifeOfWidgetAppState extends State<LifeOfWidgetApp>
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(
               height: 8.0,
