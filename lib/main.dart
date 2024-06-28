@@ -46,6 +46,7 @@ import 'package:flutter_core/widget_of_the_week/image_filtered.dart';
 import 'package:flutter_core/widget_of_the_week/interactive_viewer.dart';
 import 'package:flutter_core/widget_of_the_week/limited_box.dart';
 import 'package:flutter_core/widget_of_the_week/linear_gradient.dart';
+import 'package:flutter_core/widget_of_the_week/list_generate.dart';
 import 'package:flutter_core/widget_of_the_week/list_tile.dart';
 import 'package:flutter_core/widget_of_the_week/list_view.dart';
 import 'package:flutter_core/widget_of_the_week/list_wheel_scroll_view.dart';
@@ -122,7 +123,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // darkTheme: ThemeData.dark(),
-      home: AppLifeCycleWidget(),
+      home: ListGenerateApp(),
     );
   }
 }

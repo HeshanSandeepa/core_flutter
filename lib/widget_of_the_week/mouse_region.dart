@@ -53,7 +53,7 @@ class _MouseRegionAppState extends State<MouseRegionApp> {
                     'You have entered or exited this box this many times:'),
                 Text(
                   '$_enterCounter Entries\n$_exitCounter Exits',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 Text(
                   'The cursor is here: (${x.toStringAsFixed(2)}, ${y.toStringAsFixed(2)})',

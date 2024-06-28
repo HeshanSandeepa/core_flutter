@@ -32,14 +32,14 @@ class _BaseLineAppState extends State<BaseLineApp> {
                   baseline: 200,
                   baselineType: TextBaseline.alphabetic,
                   child:
-                      Text('0', style: Theme.of(context).textTheme.headline1),
+                      Text('0', style: Theme.of(context).textTheme.bodyLarge),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 300,
                 width: 200,
                 child: Stack(
-                  children: const <Widget>[
+                  children: <Widget>[
                     Positioned(
                       bottom: 50,
                       height: 100,
